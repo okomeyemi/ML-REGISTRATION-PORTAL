@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | Maths League</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tom-select/dist/css/tom-select.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/register.css">
+</head>
+<body>
+
+<section class="register-section">
+
+    <div class="form-container">
+
+        <h1>Student Registration</h1>
+
+        <p>Fill in your details below to become an official member of the Maths League.</p>
+
+        <form id="registerForm">
+
+<!-- =========================
+     A. PERSONAL INFORMATION
+========================= -->
+
+<h2 class="section-title">A. Personal Information</h2>
+
+<div class="input-box">
+    <label for="fullname">Full Name</label>
+    <input type="text" id="fullname" placeholder="Enter your full name" required>
+</div>
+
+<div class="input-box">
+    <label for="whatsapp">WhatsApp Number</label>
+    <input type="tel" id="whatsapp" placeholder="e.g. 08012345678" required>
+</div>
+
+<div class="input-box">
+    <label for="email">Email Address</label>
+    <input type="email" id="email" placeholder="example@email.com" required>
+</div>
+
+<div class="input-box">
+    <label for="gender">Gender</label>
+
+    <select id="gender" required>
+        <option value="">Select Gender</option>
+        <option>Male</option>
+        <option>Female</option>
+    </select>
+</div>
+
+<div class="input-box">
+    <label for="dob">Date of Birth</label>
+    <input type="date" id="dob" required>
+</div>
+
+<div class="input-box">
+    <label for="country">Country</label>
+
+    <select id="country" required>
+        <option value="">Select Country</option>
+    </select>
+</div>
+
+<div class="input-box">
+    <label for="state">State / Province</label>
+
+    <select id="state" required>
+        <option value="">Select State</option>
+    </select>
+</div>
+
+<div class="input-box">
+    <label for="lga">Local Government Area (LGA)</label>
+
+    <input
+        type="text"
+        id="lga"
+        placeholder="Enter your LGA"
+        required>
+</div>
+
+<!-- =========================
+     B. ACADEMIC INFORMATION
+========================= -->
+
+<h2 class="section-title">B. Academic Information</h2>
+
+<div class="input-box">
+    <label for="status">Status</label>
+
+    <select id="status" required>
+
+        <option value="">Select Status</option>
+
+        <option>Secondary Student</option>
+        <option>Undergraduate</option>
+        <option>Graduate</option>
+
+    </select>
+</div>
+
+<div class="input-box">
+    <label for="institution">School / Institution</label>
+
+    <input
+        type="text"
+        id="institution"
+        placeholder="Enter your school or institution"
+        required>
+</div>
+
+<div class="input-box">
+    <label for="level">Class / Level / Course of Study</label>
+
+    <input
+        type="text"
+        id="level"
+        placeholder="e.g. SS3, 200 Level"
+        required>
+</div>
+
+<div class="input-box">
+    <label for="course">Course You Want to Study</label>
+
+    <input
+        type="text"
+        id="course"
+        placeholder="e.g. Software Engineering">
+</div>
+
+<!-- We'll add Section C next. -->      
+
+<!-- =========================
+     C. MATHS LEAGUE INFORMATION
+========================= -->
+
+<h2 class="section-title">C. Maths League Information</h2>
+
+<div class="input-box">
+    <label for="invite">How were you invited to join Maths League?</label>
+
+    <select id="invite" required>
+        <option value="">Select an option</option>
+        <option>WhatsApp Group</option>
+        <option>Friend</option>
+        <option>School</option>
+        <option>Teacher/Lecturer</option>
+        <option>Social Media</option>
+        <option>Maths League Member</option>
+        <option>Other</option>
+    </select>
+</div>
+
+<div class="input-box">
+    <label for="expectation">What is your expectation from Maths League?</label>
+
+    <textarea
+        id="expectation"
+        rows="4"
+        placeholder="Tell us what you hope to gain from joining..."
+        required></textarea>
+</div>
+
+<div class="input-box">
+    <label for="meaning">What does Mathematics mean to you?</label>
+
+    <textarea
+        id="meaning"
+        rows="4"
+        placeholder="Share your thoughts..."
+        required></textarea>
+</div>
+
+<div class="input-box">
+    <label for="topic">What is your favourite Mathematics topic?</label>
+
+    <input
+        type="text"
+        id="topic"
+        placeholder="e.g. Algebra, Calculus, Geometry"
+        required>
+</div>
+
+<div class="checkbox-box">
+    <input type="checkbox" id="agree">
+
+    <label for="agree">
+        I certify that the information I have provided is correct and I consent to the Maths League storing my information for registration, communication and event purposes.
+    </label>
+</div>
+
+<button
+    type="submit"
+    class="submit-btn"
+    id="submitBtn"
+    disabled>
+
+    Register
+
+</button>
+
+<p class="note">
+    <strong>Note:</strong> Please fill the form accurately. Your details will be used for registration, updates and certificates.
+</p>
+
+        </form>
+
+    </div>
+
+</section>
+
+
+<script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-firestore-compat.js"></script>
+
+<script src="js/firebase.js"></script>
+<script src="js/register.js"></script>
+
+</body>
+</html>
