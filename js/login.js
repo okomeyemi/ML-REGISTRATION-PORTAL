@@ -9,7 +9,7 @@ loginForm.addEventListener("submit", async (e) => {
   
   try {
     
-    await auth.signInWithEmailAndPassword(email, password);
+    await window.auth.signInWithEmailAndPassword(email, password);
     
     alert("Login Successful!");
     
