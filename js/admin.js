@@ -33,6 +33,7 @@ db.collection("students")
     });
     
     displayStudents(students);
+    console.log(students);
     updateStats(students);
     
   });

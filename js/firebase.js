@@ -4,16 +4,17 @@ const firebaseConfig = {
   projectId: "ml-registration-portal",
   storageBucket: "ml-registration-portal.firebasestorage.app",
   messagingSenderId: "762761455691",
-  appId: "1:762761455691:web:b71cefeba33033ad4485ce",
-  measurementId: "G-9DGDY18WSZ"
+  appId: "1:762761455691:web:b71cefeba33033ad4485ce"
 };
 
-// Initialize Firebase ONLY ONCE
-firebase.initializeApp(firebaseConfig);
+if (!firebase.apps.length) {
+  firebase.initializeApp(firebaseConfig);
+}
 
-// Services
-window.db = firebase.firestore();
-window.auth = firebase.auth();
+const db = firebase.firestore();
+
+const auth = firebase.auth();
 
 console.log("Firebase initialized");
-console.log(window.auth);
+console.log(firebase);
+console.log(auth);
