@@ -74,6 +74,69 @@ function displayStudents(data) {
   
 }
 
+
+const modal = document.getElementById("studentModal");
+const details = document.getElementById("studentDetails");
+
+function viewStudent(id) {
+  
+  const student = students.find(s => s.id === id);
+  
+  details.innerHTML = `
+
+<h3>Personal Information</h3>
+
+<div class="detail"><strong>Full Name:</strong> ${student.fullname}</div>
+<div class="detail"><strong>WhatsApp:</strong> ${student.whatsapp}</div>
+<div class="detail"><strong>Email:</strong> ${student.email}</div>
+<div class="detail"><strong>Gender:</strong> ${student.gender}</div>
+<div class="detail"><strong>Date of Birth:</strong> ${student.dob}</div>
+<div class="detail"><strong>Country:</strong> ${student.country}</div>
+<div class="detail"><strong>State:</strong> ${student.state}</div>
+<div class="detail"><strong>LGA:</strong> ${student.lga}</div>
+
+<hr>
+
+<h3>Academic Information</h3>
+
+<div class="detail"><strong>Status:</strong> ${student.status}</div>
+<div class="detail"><strong>Institution:</strong> ${student.institution}</div>
+<div class="detail"><strong>Level:</strong> ${student.level}</div>
+<div class="detail"><strong>Course:</strong> ${student.course}</div>
+
+<hr>
+
+<h3>Maths League Information</h3>
+
+<div class="detail"><strong>Invitation:</strong> ${student.invite}</div>
+<div class="detail"><strong>Expectation:</strong> ${student.expectation}</div>
+<div class="detail"><strong>Meaning of Mathematics:</strong> ${student.meaning}</div>
+<div class="detail"><strong>Favourite Topic:</strong> ${student.topic}</div>
+
+`;
+  
+  modal.style.display = "flex";
+  
+}
+
+document.getElementById("closeModal").onclick = () => {
+  
+  modal.style.display = "none";
+  
+};
+
+window.onclick = (e) => {
+  
+  if (e.target === modal) {
+    
+    modal.style.display = "none";
+    
+  }
+  
+};
+
+
+
 // Statistics
 function updateStats(data) {
   
