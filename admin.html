@@ -54,33 +54,47 @@
 
 </section>
 
-<section class="table-container">
+<div class="table-container">
+    
+    <table>
+        
+        <thead>
+            
+            <tr>
+                
+                <th>Name</th>
+                <th>WhatsApp</th>
+                <th>Status</th>
+                <th>Institution</th>
+                <th>Country</th>
+                <th>Action</th>
+                
+            </tr>
+            
+        </thead>
+        
+        <tbody id="studentTable">
+            
+        </tbody>
+        
+    </table>
+    
+</div>
 
-<table>
 
-<thead>
-
-<tr>
-
-<th>Name</th>
-<th>Email</th>
-<th>Phone</th>
-<th>Course</th>
-<th>Country</th>
-<th>State</th>
-<th>Gender</th>
-
-</tr>
-
-</thead>
-
-<tbody id="studentTable">
-
-</tbody>
-
-</table>
-
-</section>
+<div class="modal" id="studentModal">
+    
+    <div class="modal-content">
+        
+        <span class="close" id="closeModal">&times;</span>
+        
+        <h2>Student Bio-data</h2>
+        
+        <div id="studentDetails"></div>
+        
+    </div>
+    
+</div>
 
 <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-firestore-compat.js"></script>

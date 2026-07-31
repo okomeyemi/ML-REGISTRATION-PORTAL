@@ -126,3 +126,64 @@ tbody tr:hover {
   }
   
 }
+
+
+/* Modal */
+
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, .5);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  width: 90%;
+  max-width: 700px;
+  max-height: 85vh;
+  overflow: auto;
+  background: #fff;
+  border-radius: 15px;
+  padding: 30px;
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.detail {
+  margin-bottom: 15px;
+}
+
+.detail strong {
+  color: #0B3D91;
+}
+
+.action-btn {
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #fff;
+  margin-right: 5px;
+}
+
+.view-btn {
+  background: #0B3D91;
+}
+
+.edit-btn {
+  background: #f39c12;
+}
+
+.delete-btn {
+  background: #e74c3c;
+}

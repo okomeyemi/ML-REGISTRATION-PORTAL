@@ -39,6 +39,7 @@ db.collection("students")
   });
 
 // Display students
+
 function displayStudents(data) {
   
   table.innerHTML = "";
@@ -47,13 +48,25 @@ function displayStudents(data) {
     
     table.innerHTML += `
         <tr>
-            <td>${student.fullname || ""}</td>
-            <td>${student.email || ""}</td>
-            <td>${student.phone || ""}</td>
-            <td>${student.course || ""}</td>
-            <td>${student.country || ""}</td>
-            <td>${student.state || ""}</td>
-            <td>${student.gender || ""}</td>
+
+            <td>${student.fullname}</td>
+            <td>${student.whatsapp}</td>
+            <td>${student.status}</td>
+            <td>${student.institution}</td>
+            <td>${student.country}</td>
+
+            <td>
+
+                <button
+                    class="action-btn view-btn"
+                    onclick="viewStudent('${student.id}')">
+
+                    View
+
+                </button>
+
+            </td>
+
         </tr>
         `;
     
