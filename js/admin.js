@@ -21,7 +21,6 @@ let students = [];
 
 // Load all students
 db.collection("students")
-  .orderBy("registeredAt", "desc")
   .onSnapshot((snapshot) => {
     
     students = [];
@@ -163,7 +162,7 @@ search.addEventListener("input", () => {
     
     (student.fullname || "").toLowerCase().includes(keyword) ||
     (student.email || "").toLowerCase().includes(keyword) ||
-    (student.phone || "").toLowerCase().includes(keyword) ||
+    (student.whatsapp || "").toLowerCase().includes(keyword) ||
     (student.country || "").toLowerCase().includes(keyword)
     
   );
