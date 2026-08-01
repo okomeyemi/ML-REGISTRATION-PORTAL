@@ -21,11 +21,16 @@ let students = [];
 
 // Load all students
 db.collection("students")
-  .onSnapshot((snapshot) => {
+  .get()
+  .then((snapshot) => {
+    
+    console.log("Documents:", snapshot.size);
     
     students = [];
     
     snapshot.forEach((doc) => {
+      console.log(doc.data());
+      
       students.push({
         id: doc.id,
         ...doc.data()
@@ -33,9 +38,11 @@ db.collection("students")
     });
     
     displayStudents(students);
-    console.log(students);
     updateStats(students);
     
+  })
+  .catch((error) => {
+    console.error("Firestore Error:", error);
   });
 
 // Display students

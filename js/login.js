@@ -9,9 +9,7 @@ loginForm.addEventListener("submit", async (e) => {
   
   try {
     
-    await window.auth.signInWithEmailAndPassword(email, password);
-    
-    alert("Login Successful!");
+    await auth.signInWithEmailAndPassword(email, password);
     
     window.location.href = "admin.html";
     
